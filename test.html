@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Container</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content 1fr min-content;
+            height: 100%;
+            width: 100%;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            grid-column: span 2;
+        }
+
+        .main-content {
+            background-color: #f2f2f2;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+
+        .map {
+            height: calc(100% - 100px);
+            width: 100%;
+            background-color: #ccc;
+        }
+
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .chart {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            Header
+        </header>
+        <main class="main-content">
+            <div class="map">
+                Map Component
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    Chart 1
+                </div>
+                <div class="chart">
+                    Chart 2
+                </div>
+            </div>
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
